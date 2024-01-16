@@ -1,1 +1,1 @@
-## Ecommerce app using MERN Stacj
+## Ecommerce app using MERN Stack
