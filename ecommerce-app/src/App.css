@@ -234,6 +234,7 @@ footer .input-group-text {
   background-color: white;
   border-radius: 10px;
   overflow: hidden;
+  width: 100%;
 }
 .product-card .product-image{
   height: 270px;
@@ -264,6 +265,10 @@ footer .input-group-text {
 .product-card .product-details .price{
   font-size: 16px;
   color: var(--color-1c1c1b);
+}
+.product-card p.description{
+  font-size: 13px;
+  color: #777;
 }
 .action-bar{
   top: 20%;
@@ -311,3 +316,82 @@ footer .input-group-text {
   color: white;
 }
 /* Famous product ends */
+/* Our Store */
+.filter-card{
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px 15px 25px;
+}
+.filter-title{
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--color-1c1c1b);
+  margin-bottom: 20px;
+}
+.filter-card ul,
+.filter-card .form-check-label{
+  list-style-type:none;
+  font-size: 13px;
+  line-height: 30px;
+  color: #777777;
+  cursor: pointer;
+}
+.sub-title{
+  font-size: 14px;
+  font-weight: 600;
+  color: #1c1c1b;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.colors{
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.colors li{
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+}
+.random-products h5{
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.random-products:first-child{
+  border-bottom: 1px solid var(--color-ededed);
+}
+.filter-sort-grid{
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+}
+.gr-12{
+  width: 100%;
+}
+.gr-6{
+  width: 48%;
+}
+.gr-4{
+  width: 32.5%;
+}
+.gr-3{
+  width: 24%;
+}
+.gr-12 .product-card{
+  display: flex;
+  gap: 20px;
+}
+.gr-12 .product-card .product-image{
+  width: 270px;
+}
+.grid img{
+  width: 35px;
+  height: 35px;
+  background-color: #f2f2f2;
+  padding: 8px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+/* Our Store ends */
