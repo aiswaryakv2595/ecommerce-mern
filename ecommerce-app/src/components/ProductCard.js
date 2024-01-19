@@ -31,7 +31,7 @@ const ProductCard = ({ grid }) => {
             edit={false}
             activeColor="#ffd700"
           />
-          <p className={`description ${grid == 12 ? 'd-block':'d-none'}`}>
+          <p className={`description ${grid === 12 ? 'd-block':'d-none'}`}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
             repudiandae natus velit placeat optio voluptates.
           </p>
