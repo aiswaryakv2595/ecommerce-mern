@@ -6,17 +6,43 @@ import ProductCard from "../components/ProductCard";
 import SpecialProducts from "../components/SpecialProducts";
 import FamousCard from "../components/FamousCard";
 import Meta from "../components/Meta";
+
+import { main_banner_1,catbanner_01,
+  catbanner_02,
+  catbanner_03,
+  catbanner_04,
+  service,
+  service2,
+  service3,
+  service4,
+  service5,
+  camera,
+  headphone,
+  tv,
+  famous_1,
+  famous_2,
+  famous_3,
+  famous_4, 
+  brand_01,
+  brand_02,
+  brand_03,
+  brand_04,
+  brand_05,
+  brand_06,
+  brand_07,
+  brand_08 } from "../images";
+import Container from "../components/Container";
+import {services} from "../utils/Data"
 const Home = () => {
   return (
     <>
     <Meta title={"Digitech"}/>
-      <section className="home-wrapper-1 py-5">
-        <div className="container-xxl">
-          <div className="row">
+    <Container class1="home-wrapper-1 py-5">
+    <div className="row">
             <div className="col-6">
               <div className="main-banner position-relative">
                 <img
-                  src="images/main-banner-1.jpg"
+                  src={main_banner_1}
                   className="img-fluid rounded-3"
                   alt="main banner"
                 />
@@ -32,7 +58,7 @@ const Home = () => {
               <div className="d-flex gap-10 flex-wrap justify-content-between align-items-center">
                 <div className="small-banner position-relative">
                   <img
-                    src="images/catbanner-01.jpg"
+                    src={catbanner_01}
                     className="img-fluid rounded-3"
                     alt="main banner"
                   />
@@ -44,7 +70,7 @@ const Home = () => {
                 </div>
                 <div className="small-banner position-relative">
                   <img
-                    src="images/catbanner-02.jpg"
+                    src={catbanner_02}
                     className="img-fluid rounded-3"
                     alt="main banner"
                   />
@@ -59,7 +85,7 @@ const Home = () => {
                 </div>
                 <div className="small-banner position-relative">
                   <img
-                    src="images/catbanner-03.jpg"
+                    src={catbanner_03}
                     className="img-fluid rounded-3"
                     alt="main banner"
                   />
@@ -74,7 +100,7 @@ const Home = () => {
                 </div>
                 <div className="small-banner position-relative">
                   <img
-                    src="images/catbanner-04.jpg"
+                    src={catbanner_04}
                     className="img-fluid rounded-3"
                     alt="main banner"
                   />
@@ -89,56 +115,31 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section className="home-wrapper-2 py-5">
-        <div className="container-xxl">
-          <div className="row">
+    </Container>
+   <Container class1="home-wrapper-2 py-5">
+   <div className="row">
             <div className="col-12">
               <div className="services d-flex align-items-center justify-content-between">
-                <div>
-                  <div className="d-flex align-items-center gap-15">
-                    <img src="images/service.png" alt="services" />
-                    <h6>Free Shipping</h6>
-                    <p className="mb-0">From All order over $5</p>
-                  </div>
-                </div>
-                <div>
-                  <div className="d-flex align-items-center gap-15">
-                    <img src="images/service-02.png" alt="services" />
-                    <h6>Daily surprice Offers</h6>
-                    <p className="mb-0">Save upto 25% off</p>
-                  </div>
-                </div>
-                <div>
-                  <div className="d-flex align-items-center gap-15">
-                    <img src="images/service-03.png" alt="services" />
-                    <h6>Support 24/7</h6>
-                    <p className="mb-0">Shop with an Expert</p>
-                  </div>
-                </div>
-                <div>
-                  <div className="d-flex align-items-center gap-15">
-                    <img src="images/service-04.png" alt="services" />
-                    <h6>Affordable Prices</h6>
-                    <p className="mb-0">Get Factory Default Price</p>
-                  </div>
-                </div>
-                <div>
-                  <div className="d-flex align-items-center gap-15">
-                    <img src="images/service-05.png" alt="services" />
-                    <h6>Secure Payments</h6>
-                    <p className="mb-0">100% Protected</p>
-                  </div>
-                </div>
+                {
+                  services?.map((i,j)=>{
+                    return(
+                    <div className="d-flex-align-items-center gap-15" key={j}>
+                      <img src={i.image} alt="services" />
+                      <div>
+                        <h6>{i.title}</h6>
+                        <p className="mb-0">{i.tagline}</p>
+                      </div>
+                    </div>
+                    )
+})
+                }
+                
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section className="home-wrapper-2 py-5">
-        <div className="container-xxl">
-          <div className="row">
+   </Container>
+     <Container class1="home-wrapper-2 py-5">
+     <div className="row">
             <div className="col-12">
               <div className="categories d-flex justify-content-between flex-wrap align-items-center">
                 <div className="col-md-3 d-flex gap align-items-center">
@@ -146,65 +147,63 @@ const Home = () => {
                     <h6>Music & Gaming</h6>
                     <p>10 Items</p>
                   </div>
-                  <img src="images/camera.jpg" alt="camera" />
+                  <img src={camera} alt="camera" />
                 </div>
                 <div className="col-md-3 d-flex gap align-items-center">
                   <div>
                     <h6>Camera</h6>
                     <p>10 Items</p>
                   </div>
-                  <img src="images/camera.jpg" alt="camera" />
+                  <img src={camera} alt="camera" />
                 </div>
                 <div className="col-md-3 d-flex gap align-items-center">
                   <div>
                     <h6>Smart Tv</h6>
                     <p>10 Items</p>
                   </div>
-                  <img src="images/tv.jpg" alt="tv" />
+                  <img src={tv} alt="tv" />
                 </div>
                 <div className="col-md-3 d-flex gap align-items-center">
                   <div>
                     <h6>Head Phones</h6>
                     <p>10 Items</p>
                   </div>
-                  <img src="images/headphone.jpg" alt="headphone" />
+                  <img src={headphone} alt="headphone" />
                 </div>
                 <div className="col-md-3 d-flex gap align-items-center">
                   <div>
                     <h6>Music & Gaming</h6>
                     <p>10 Items</p>
                   </div>
-                  <img src="images/camera.jpg" alt="camera" />
+                  <img src={camera} alt="camera" />
                 </div>
                 <div className="col-md-3 d-flex gap align-items-center">
                   <div>
                     <h6>Camera</h6>
                     <p>10 Items</p>
                   </div>
-                  <img src="images/camera.jpg" alt="camera" />
+                  <img src={camera} alt="camera" />
                 </div>
                 <div className="col-md-3 d-flex gap align-items-center">
                   <div>
                     <h6>Smart Tv</h6>
                     <p>10 Items</p>
                   </div>
-                  <img src="images/tv.jpg" alt="tv" />
+                  <img src={tv} alt="tv" />
                 </div>
                 <div className="col-md-3 d-flex gap align-items-center">
                   <div>
                     <h6>Head Phones</h6>
                     <p>10 Items</p>
                   </div>
-                  <img src="images/headphone.jpg" alt="headphone" />
+                  <img src={headphone} alt="headphone" />
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section className="featured-wrapper py-5 home-wrapper-2">
-        <div className="container-xxl">
-          <div className="row">
+     </Container>
+   <Container class1="featured-wrapper py-5 home-wrapper-2">
+   <div className="row">
             <div className="col-12">
               <h3 className="section-heading">Featured Collection</h3>
             </div>
@@ -213,34 +212,32 @@ const Home = () => {
             <ProductCard />
             <ProductCard />
           </div>
-        </div>
-      </section>
-      <div className="famous-wrapper py-5 home-wrapper-2">
-        <div className="container-xxl">
-          <div className="row">
+   </Container>
+    <Container class1="famous-wrapper py-5 home-wrapper-2">
+    <div className="row">
             <FamousCard
-              images="images/famous-1.jpg"
+              images={famous_1}
               heading5="Big Screen"
               heading6="Smart watch Series 7"
               paragraph="From $399 or $16.62/mo for 24 months"
               theme='dark'
             />
               <FamousCard
-              images="images/famous-2.jpg"
+              images={famous_2}
               heading5="studio display"
               heading6="600 nits of Brightness"
               paragraph="27 inch Display"
               theme='light'
             />
               <FamousCard
-              images="images/famous-3.jpg"
+              images={famous_3}
               heading5="smart phones"
               heading6="Smart Phone 13 Pro"
               paragraph="Now in Green From $999 or $41.62/mo for 24 months"
               theme='light'
             />
                 <FamousCard
-              images="images/famous-4.jpg"
+              images={famous_4}
               heading5="Home Speakers"
               heading6="Room-filling Sound"
               paragraph="From $699 or $116/mo for 12 months"
@@ -248,11 +245,9 @@ const Home = () => {
             />
         
           </div>
-        </div>
-      </div>
-      <section className="special-wrapper py-5 home-wrapper-2">
-        <div className="container-xxl">
-          <div className="row">
+    </Container>
+     <Container class1="special-wrapper py-5 home-wrapper-2">
+     <div className="row">
             <div className="col-12">
               <h3 className="section-heading">Special Products</h3>
             </div>
@@ -263,11 +258,9 @@ const Home = () => {
             <SpecialProducts />
             <SpecialProducts />
           </div>
-        </div>
-      </section>
-      <section className="popular-wrapper py-5 home-wrapper-2">
-        <div className="container-xxl">
-          <div className="row">
+     </Container>
+     <Container class1="popular-wrapper py-5 home-wrapper-2">
+     <div className="row">
             <div className="col-12">
               <h3 className="section-heading">Our Popular Products</h3>
             </div>
@@ -284,47 +277,43 @@ const Home = () => {
             <ProductCard />
             <ProductCard />
           </div>
-        </div>
-      </section>
-      <section className="marque-wrapper py-5">
-        <div className="container-xxl">
-          <div className="row">
+     </Container>
+     <Container class1="marque-wrapper py-5">
+     <div className="row">
             <div className="col-12">
               <div className="marquee-inner-wrapper card-wrapper ">
                 <Marquee className="d-flex">
                   <div className="mx-4 w-25">
-                    <img src="images/brand-01.png" alt="brands" />
+                    <img src={brand_01} alt="brands" />
                   </div>
                   <div className="mx-4 w-25">
-                    <img src="images/brand-02.png" alt="brands" />
+                    <img src={brand_02} alt="brands" />
                   </div>
                   <div className="mx-4 w-25">
-                    <img src="images/brand-03.png" alt="brands" />
+                    <img src={brand_03} alt="brands" />
                   </div>
                   <div className="mx-4 w-25">
-                    <img src="images/brand-04.png" alt="brands" />
+                    <img src={brand_04} alt="brands" />
                   </div>
                   <div className="mx-4 w-25">
-                    <img src="images/brand-05.png" alt="brands" />
+                    <img src={brand_05} alt="brands" />
                   </div>
                   <div className="mx-4 w-25">
-                    <img src="images/brand-06.png" alt="brands" />
+                    <img src={brand_06} alt="brands" />
                   </div>
                   <div className="mx-4 w-25">
-                    <img src="images/brand-07.png" alt="brands" />
+                    <img src={brand_07} alt="brands" />
                   </div>
                   <div className="mx-4 w-25">
-                    <img src="images/brand-08.png" alt="brands" />
+                    <img src={brand_08} alt="brands" />
                   </div>
                 </Marquee>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section className="blog-wrapper py-5 home-wrapper-2">
-        <div className="container-xxl">
-          <div className="row">
+     </Container>
+      <Container class1="blog-wrapper py-5 home-wrapper-2">
+      <div className="row">
             <div className="col-12">
               <h3 className="section-heading">Our Latest Blogs</h3>
             </div>
@@ -341,8 +330,8 @@ const Home = () => {
               <BlogCard/>
             </div>
           </div>
-        </div>
-      </section>
+      </Container>
+      
     </>
   );
 };

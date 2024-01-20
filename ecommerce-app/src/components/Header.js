@@ -1,6 +1,8 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
+import { cart, compare, menu, user, wishlist } from "../images";
+
 const Header = () => {
   return (
     <>
@@ -48,25 +50,25 @@ const Header = () => {
               <div className="header-upper-links d-flex align-items-center justify-content-between">
                 <div>
                   <Link className="d-flex align-items-center gap-10 text-white" to={"/compare-product"}>
-                    <img src="/images/compare.svg" alt="compare" />
+                    <img src={compare} alt="compare" />
                     <p className="mb-0">Compare Products</p>
                   </Link>
                 </div>
                 <div>
                   <Link className="d-flex align-items-center gap-10 text-white" to={"/wishlist"}>
-                    <img src="/images/wishlist.svg" alt="wishlist" />
+                    <img src={wishlist} alt="wishlist" />
                     <p className="mb-0"> Favorite Wishlist</p>
                   </Link>
                 </div>
                 <div>
                   <Link className="d-flex align-items-center gap-10 text-white" to={"/login"}>
-                    <img src="/images/user.svg" alt="user" />
+                    <img src={user} alt="user" />
                     <p className="mb-0">Log in My Account</p>
                   </Link>
                 </div>
                 <div>
                   <Link className="d-flex align-items-center gap-10 text-white" to={"/cart"}>
-                    <img src="/images/cart.svg" alt="cart" />
+                    <img src={cart} alt="cart" />
                     <div className="d-flex flex-column">
                       <span className="badge bg-white text-dark">0</span>
                       <p className="mb-0">$500</p>
@@ -91,7 +93,7 @@ const Header = () => {
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    <img src="images/menu.svg" alt="" />
+                    <img src={menu} alt="" />
                     <span className="me-5 d-inline-block">
                     Shop Categories
                     </span>
