@@ -6,18 +6,18 @@ const ProductCard = ({ grid }) => {
   console.log(location);
   return (
     <div
-      className={`${location.pathname === "/store" ? `gr-${grid}` : "col-3"}`}
+      className={`${location.pathname === "/product" ? `gr-${grid}` : "col-3"}`}
     >
       {console.log(grid)}
-      <div className="product-card position-relative">
+      <Link to={":id"} className="product-card position-relative">
         <div className="wishlist-icon position-absolute">
           <Link>
-            <img src="images/wish.svg" alt="wishlist" />
+            <img src="/images/wish.svg" alt="wishlist" />
           </Link>
         </div>
         <div className="product-image">
-          <img src="images/watch.jpg" className="img-fluid" alt="watch" />
-          <img src="images/watch2.jpeg" className="img-fluid" alt="watch2" />
+          <img src="/images/watch.jpg" className="img-fluid" alt="watch" />
+          <img src="/images/watch2.jpeg" className="img-fluid" alt="watch2" />
         </div>
         <div className="product-details">
           <h6 className="brand">Havels</h6>
@@ -41,17 +41,17 @@ const ProductCard = ({ grid }) => {
         <div className="action-bar position-absolute">
           <div className="d-flex flex-column gap-15">
             <Link>
-              <img src="images/view.svg" alt="view" />
+              <img src="/images/view.svg" alt="view" />
             </Link>
             <Link>
-              <img src="images/prodcompare.svg" alt="compare" />
+              <img src="/images/prodcompare.svg" alt="compare" />
             </Link>
             <Link>
-              <img src="images/add-cart.svg" alt="" />
+              <img src="/images/add-cart.svg" alt="" />
             </Link>
           </div>
         </div>
-      </div>
+      </Link>
     </div>
   );
 };

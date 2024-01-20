@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="row align-items-center">
         <div className="col-5">
           <div className="footer-top-data d-flex gap-15 align-items-center">
-            <img src="images/newsletter.png" alt="newsletter" />
+            <img src="/images/newsletter.png" alt="newsletter" />
             <h2 className='mb-0 text-white'>Sign Up for Newsletter</h2>
           </div>
         </div>
@@ -50,11 +50,11 @@ const Footer = () => {
         <div className="col-3">
           <h4 className='text-white mb-4'>Information</h4>
           <div className='footer-links d-flex flex-column'>
-            <Link className="text-white py-2 mb-1">Privacy Policy</Link>
-            <Link className="text-white py-2 mb-1">Refund Policy</Link>
-            <Link className="text-white py-2 mb-1">Shipping Policy</Link>
-            <Link className="text-white py-2 mb-1">Terms & Conditions</Link>
-            <Link className="text-white py-2 mb-1">Blogs</Link>
+            <Link className="text-white py-2 mb-1" to={"/privacy-policy"}>Privacy Policy</Link>
+            <Link className="text-white py-2 mb-1" to={"/refund-policy"}>Refund Policy</Link>
+            <Link className="text-white py-2 mb-1" to={"/shipping-policy"}>Shipping Policy</Link>
+            <Link className="text-white py-2 mb-1" to={"/terms-condition"}>Terms & Conditions</Link>
+            <Link className="text-white py-2 mb-1" to={"/blogs"}>Blogs</Link>
           </div>
         </div>
         <div className="col-3">
