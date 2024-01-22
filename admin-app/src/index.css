@@ -58,6 +58,20 @@
   top: 16px;
   right: -6px;
 }
-.main{
+main{
   overflow-y: scroll;
+  height: 79vh;
+  background: transparent !important;
+}
+main::-webkit-scrollbar{
+  width: 0px;
+}
+.red{
+  color: red;
+}
+.green{
+  color: green;
+}
+.dashboard-container .antv-plot .g2-view .g2-view-background rect {
+  fill: #ffd333 !important; 
 }

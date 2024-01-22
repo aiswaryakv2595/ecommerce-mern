@@ -53,9 +53,9 @@ const MainLayout = () => {
               label: "Dashboard",
             },
             {
-              key: "customer",
+              key: "customers",
               icon: <UserAddOutlined className="fs-4" />,
-              label: "Customer",
+              label: "Customers",
             },
             {
               key: "catalog",
@@ -132,7 +132,7 @@ const MainLayout = () => {
                 {
                   key: "blog-category-list",
                   icon: <FaBlog className="fs-4" />,
-                  label: "Add Blog Category List",
+                  label: "Blog Category List",
                 },
               ],
             },
