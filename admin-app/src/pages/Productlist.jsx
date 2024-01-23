@@ -1,6 +1,6 @@
 import { Table } from 'antd';
 import React from 'react'
-
+// import {EditFilled,DeleteFilled} from '@ant-design/icons'
 const columns = [
     {
       title: 'SNo',

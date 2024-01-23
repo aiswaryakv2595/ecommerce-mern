@@ -19,7 +19,7 @@ import { MdConnectWithoutContact } from "react-icons/md";
 import { ImBlog, ImBlogger2 } from "react-icons/im";
 import { Layout, Menu, Button, theme } from "antd";
 import { IoIosNotifications } from "react-icons/io";
-import { Outlet, useNavigate } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 
 const { Header, Sider, Content } = Layout;
 const MainLayout = () => {
@@ -95,7 +95,7 @@ const MainLayout = () => {
                 {
                   key: "color",
                   icon: <BgColorsOutlined className="fs-4" />,
-                  label: "Color",
+                  label: "Add Color",
                 },
                 {
                   key: "color-list",
@@ -169,7 +169,7 @@ const MainLayout = () => {
                 3
               </span>
             </div>
-            <div className="d-flex gap-3 align-items-center">
+            <div className="d-flex gap-3 align-items-center dropdown"href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <div>
                 <img
                   width={32}
@@ -183,6 +183,11 @@ const MainLayout = () => {
                 <h5 className="mb-0">AiswaryaKV</h5>
                 <p className="mb-0">aisasjdn@gmail.com</p>
               </div>
+              <ul class="dropdown-menu">
+    <li><Link className="dropdown-item" to="/">View Profile</Link></li>
+    <li><Link className="dropdown-item" to="/">Signout</Link></li>
+    
+  </ul>
             </div>
           </div>
         </Header>
