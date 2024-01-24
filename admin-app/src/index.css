@@ -109,3 +109,7 @@ color: var(--color-828599);
   height: auto;
   line-height: 20px;
 }
+.error{
+  color: red;
+  font-size: 12px;
+}
