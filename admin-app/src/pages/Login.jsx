@@ -26,20 +26,19 @@ const Login = () => {
     validationSchema: schema,
     onSubmit: (values) => {
       dispatch(login(values))
-      alert(JSON.stringify(values, null, 2));
+      
     },
   });
   const {user,isLoading,isError,isSuccess,message} = useSelector(
     (state) => state.auth
   )
-  useEffect(()=>{
-      if(!user==null || isSuccess){
-        navigate('admin')
-      }
-      else{
-        alert("not")
-      }
-  },[user,isLoading,isError,isSuccess,message])
+  useEffect(() => {
+    if (user || isSuccess) {
+      navigate("admin");
+    } else {
+      navigate("");
+    }
+  }, [user, isError, isSuccess, isLoading]);
   return (
     <div
       className="py-5 d-flex align-items-center justify-content-center"
@@ -48,6 +47,9 @@ const Login = () => {
       <div className="my-5 w-25 bg-white rounded-3 mx-auto p-3">
         <h3 className="text-center">Login</h3>
         <p className="text-center">Login to your account to continue</p>
+        <div className="error text-center">
+          {message.message=="Rejected"?"You are not Admin":""}
+        </div>
         <form action="" onSubmit={formik.handleSubmit}>
           <CustomInput
             type="text"
