@@ -443,6 +443,19 @@ const getOrders = asyncHandler(async (req, res) => {
     throw new Error(error);
   }
 });
+//get all orders
+const getAllOrders = asyncHandler(async (req, res) => {
+  try {
+    const alluserorders = await Order.find()
+      .populate("products.product")
+      .populate("orderBy");
+      
+    res.json(alluserorders);
+  } catch (error) {
+    throw new Error(error);
+  }
+});
+
 
 //update order status
 
@@ -487,5 +500,6 @@ module.exports = {
   applyCoupon,
   createOrder,
   getOrders,
+  getAllOrders,
   updateOrderStatus,
 };
